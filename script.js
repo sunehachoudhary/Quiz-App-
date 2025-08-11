@@ -401,6 +401,60 @@ const dbmsQuestions = [
   }
 ];
 
+//Node.js Questions
+const nodejsQuiz = [
+  {
+    question: "What is Node.js primarily used for?",
+    options: ["Designing user interfaces", "Server-side JavaScript execution", "Database management", "Image editing"],
+    answer: "Server-side JavaScript execution"
+  },
+  {
+    question: "Which of the following is true about Node.js?",
+    options: ["It runs in the browser", "It is single-threaded", "It uses Python for execution", "It is compiled to machine code before running"],
+    answer: "It is single-threaded"
+  },
+  {
+    question: "Which module is used to create a web server in Node.js?",
+    options: ["http", "fs", "url", "os"],
+    answer: "http"
+  },
+  {
+    question: "What does npm stand for?",
+    options: ["Node Package Manager", "Node Program Module", "New Programming Method", "Network Package Manager"],
+    answer: "Node Package Manager"
+  },
+  {
+    question: "Which command initializes a new Node.js project?",
+    options: ["node init", "npm init", "node new", "npm start"],
+    answer: "npm init"
+  },
+  {
+    question: "How do you import a module in Node.js using CommonJS syntax?",
+    options: ["import module from 'module'", "require('module')", "include('module')", "load('module')"],
+    answer: "require('module')"
+  },
+  {
+    question: "What is the default scope of variables in Node.js modules?",
+    options: ["Global", "Function scope", "Module scope", "Block scope"],
+    answer: "Module scope"
+  },
+  {
+    question: "Which method is used to read files asynchronously in Node.js?",
+    options: ["fs.readFileSync()", "fs.readFile()", "fs.open()", "fs.loadFile()"],
+    answer: "fs.readFile()"
+  },
+  {
+    question: "What is the event loop in Node.js?",
+    options: ["A function to repeat tasks", "A single-threaded loop that handles asynchronous callbacks", "A module for managing events", "A scheduler for cron jobs"],
+    answer: "A single-threaded loop that handles asynchronous callbacks"
+  },
+  {
+    question: "Which framework is most commonly used with Node.js for building web applications?",
+    options: ["Flask", "Django", "Express", "Laravel"],
+    answer: "Express"
+  }
+];
+
 
 // Function to render a single question
 const renderQuestion = (question, index, sectionId) => {
@@ -532,8 +586,12 @@ if (document.getElementById("html-questions")) {
 } else if (document.getElementById("dsa-questions")) {
   questions = dsaQuestions;
   sectionId = "dsa-questions";
-}
+}else if (document.getElementById('nodejs-questions')) {
+    questions = nodejsQuiz; // match your array name
+    sectionId = "nodejs-questions";
+};
 
+    
   // Render questions and attach event listeners only if a valid section is found
   if (sectionId) {
     renderQuestions(questions, sectionId);
@@ -551,4 +609,4 @@ if (document.getElementById("html-questions")) {
       .getElementById("calculate-score-btn")
       .addEventListener("click", () => calculateTotalScore(questions));
   }
-});
+     });
