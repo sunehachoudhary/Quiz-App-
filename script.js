@@ -398,7 +398,24 @@ const dbmsQuestions = [
     question: "Which command is used to delete all rows from a table without logging?",
     options: ["DELETE", "DROP", "TRUNCATE", "REMOVE"],
     answer: "TRUNCATE"
-  }
+  },
+{
+  question: "DBMS stands for?",
+  options: ["Database Management System", "Data Basic Management Setup", "Data Base Machine System", "Database Managing Service"],
+  answer: "Database Management System"
+},
+{
+  question: "Which key links two tables?",
+  options: ["Primary Key", "Foreign Key", "Super Key", "Candidate Key"],
+  answer: "Foreign Key"
+},
+{
+  question: "Which language is used to insert data?",
+  options: ["DDL", "DML", "DCL", "TCL"],
+  answer: "DML"
+},
+
+
 ];
 
 
